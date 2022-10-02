@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.2.1/math.js" integrity="sha512-47N5yVdAeXJ+9qstVMTH2Z0EpX618sjYZcswRwhpldSTD0IbW6yQPtzg4RLrPp/2+TIgEF1elT68/ZBu82nqJA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <form onsubmit="func();return false">
+        <input type="number" id="p">
+        <button type="submit">Enter</button>
+    </form>
+    <h3 id="sq"></h3>
+    <h3 id = "sqrt"></h3>
+    <script>
+        function func(){
+        let a=document.querySelector("#p").value
+        a=Number(a)
+        let sq=math.square(a)
+           // documrent.write("The square of the number is "+a)
+            document.querySelector("#sq").innerHTML="square = "+sq
+            let sqrt=math.sqrt(a)
+            document.querySelector("#sqrt").innerHTML="square root = "+sqrt
+        }
+    </script>
+</body>
+</html>
